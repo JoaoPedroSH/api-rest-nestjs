@@ -1,0 +1,56 @@
+GET http://localhost:3000/products
+
+
+###
+GET http://localhost:3000/products/4
+
+
+###
+POST http://localhost:3000/products
+Content-Type: application/json
+
+{
+  "name": "Capacitor",
+  "price": 100
+}
+
+
+###
+PATCH http://localhost:3000/products/1
+Content-Type: application/json
+
+{
+  "name": "Magnetom",
+  "price": 200
+}
+
+
+###
+DELETE http://localhost:3000/products/1
+
+###
+GET http://localhost:3000/stock-inputs
+
+###
+POST http://localhost:3000/stock-inputs
+Content-Type: application/json
+
+{
+  "product_id": 4,
+  "quantity": 10,
+  "date": "2001-07-27"
+}
+
+
+###
+GET http://localhost:3000/stock-outputs
+
+###
+POST http://localhost:3000/stock-outputs
+Content-Type: application/json
+
+{
+  "product_id": 4,
+  "quantity": 5,
+  "date": "2001-07-27"
+}
